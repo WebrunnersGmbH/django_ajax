@@ -1,5 +1,5 @@
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.importlib import import_module
+from importlib import import_module
 from django.conf import settings
 
 AJAX_CONFIG_PROCESSORS = getattr(settings, 'AJAX_CONFIG_PROCESSORS', ())
