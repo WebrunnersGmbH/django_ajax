@@ -26,7 +26,7 @@ def render_to_json(request, json_obj):
     # <iframes> will not work in IE using the official mime type as the browser
     # will schow a "save file as" dialog. So <iframe>'s will be sent as
     # text/plain, which should work for other browsers, too.
-    if request.REQUEST.get('iframe'):
+    if request.GET.get('iframe'):
         response['Content-Type'] = "text/plain; charset=utf-8"
     else:
         response['Content-Type'] = "application/json; charset=utf-8"
